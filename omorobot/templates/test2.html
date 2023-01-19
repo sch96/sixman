@@ -34,6 +34,10 @@
       <div class="title">A1 Omorobot</div>
       <div class="sub_title">Liverpool manager Jurgen Klopp has said 
         he will not leave the club unless he is forced to, 
+        {% for user in Users %}
+          <p>이름 {{user.name}}</p>
+          <p>모델명 : {{user.models}}</p>
+        {% endfor %}
         and hinted at changes at Anfield during the summer.
         The German's comments come amid a run of poor form for the Reds, 
         who are ninth in the Premier League and 10 points off a top-four spot.</div>
