@@ -23,17 +23,19 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '72$dfpnt@dt!l=riry(g-ig4ps3$ch^lm7@lv%rs3wpf1v+v4e'
+
+# local key
+# SECRET_KEY = '72$dfpnt@dt!l=riry(g-ig4ps3$ch^lm7@lv%rs3wpf1v+v4e'
 
 #  배포용 시크릿키
-# def get_env_variable(var_name):
-#   try:
-#     return os.environ[var_name]
-#   except KeyError:
-#     error_msg = 'Set the {} environment variable'.format(var_name)
-#     raise ImproperlyConfigured(error_msg)
+def get_env_variable(var_name):
+  try:
+    return os.environ[var_name]
+  except KeyError:
+    error_msg = 'Set the {} environment variable'.format(var_name)
+    raise ImproperlyConfigured(error_msg)
 
-# SECRET_KEY = get_env_variable('DJANGO_SECRET')
+SECRET_KEY = get_env_variable('DJANGO_SECRET')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
