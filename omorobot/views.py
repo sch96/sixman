@@ -21,6 +21,7 @@ def index(request):
 
 # 회원별 index페이지 보여주기
 def user(request, pk) :
+    mycar = Mycar.objects.all()
     old_user = User.objects.get(user_name=f"{pk}")
     username = old_user.user_name
     usermodel = old_user.model_name
@@ -28,6 +29,7 @@ def user(request, pk) :
         "context" : "login한 유저가 있따." ,
         "user_name" : username,
         "user_model" : usermodel,
+        "mycars" : mycar,
     }
     return render(request, "index.html", context)
 

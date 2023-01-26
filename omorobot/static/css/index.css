@@ -11,81 +11,9 @@
 body{
   margin:0px;
 }
-/* 본문 2 function */
-.B_title{
-  position: absolute;
-  top: -350px;
-  font-size: 3em;
-  margin: 0px;
-}
-.B_title:after {
-  display:block;
-  content: '';
-  border-bottom: solid 5px black;  
-  transform: scaleX(0);  
-  transition: transform 250ms ease-in-out;
-}
-.B_title:hover:after { transform: scaleX(1); }
 
-.art1{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  margin:0px; margin-right: -20px;
-  width: 99vw;
-  height: 100vh;
-  background: linear-gradient(180deg, rgb(114, 114, 114) 0%, rgb(255, 234, 116) 100%);
-}
-.container1{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  margin: 0px;
-}
 
-/* 본문 1 product */
-.P_title{
-  position: absolute;
-  top: 0px;
-  font-size: 2.5em;
-  color:rgb(253, 226, 74);
-  margin-bottom: 100px;
-}
-.P_title:after {
-  display:block;
-  content: '';
-  border-bottom: solid 5px rgb(253, 226, 74);  
-  transform: scaleX(0);  
-  transition: transform 250ms ease-in-out;
-}
-.P_title:hover:after { transform: scaleX(1); }
 
-.art2{
-  display: flex;
-  justify-content: center;
-  position: relative;
-  margin:0px;
-  width: 99.1vw;
-  height:300vh;
-  background: linear-gradient(180deg, black 0%, rgb(114, 114, 114) 100%);
-}
-.container2{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color:rgb(255, 244, 184);
-  flex-direction: column;
-}
-.explain1{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  color:white;
-  margin: 40px;
-}
 /* 설명 a side */
 .a{
   color: gold;
@@ -136,7 +64,7 @@ body{
 }
 .chart-container{
   position: relative;
-  top: -300px;
+  top: 250px;
 }
 
 #omo{
