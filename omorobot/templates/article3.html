@@ -40,6 +40,7 @@
   </div>
   <div>
     <div>
+      {% if mycars%}
       {% for mycar in mycars %}
       <p>속도{{ mycar.speed }}  배터리{{ mycar.battery }}  색상{{ mycar.color }}
       <a href="{{mycar.get_delete_url}}">삭제</a></p>
@@ -53,5 +54,6 @@
         <button type="submit">수정</button>
       </form>
       {% endfor %}
+      {% endif %}
   </div>
 </article>
